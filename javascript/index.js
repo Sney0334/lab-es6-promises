@@ -87,12 +87,16 @@ obtainInstruction('steak', 0)
   })
   .then( (step6) => {
   document.querySelector("#steak").innerHTML += `<li>${step6}</li>`
+  
   return obtainInstruction('steak',7)
   })
-  .then( (step4) => {
-  document.querySelector("#steak").innerHTML += `<li>stake is ready!</li>`
-  document.getElementById("steakImg").removeAttribute('hidden')
+  .then( (step7) => {
+    document.querySelector("#steak").innerHTML += `<li>${step7}</li>`
+    document.querySelector("#steak").innerHTML += `<li>stake is ready!</li>`
+    return obtainInstruction('steak',7)
   })
+  document.getElementById("steakImg").removeAttribute('hidden')
+  
  
 
 
